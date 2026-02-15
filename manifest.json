@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "PCT Reflection Reminder",
+  "version": "1.0",
+  "description": "Daily 3:00 PM reminder to complete your teaching reflections",
+  "permissions": [
+    "notifications",
+    "alarms",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
