@@ -1,7 +1,7 @@
 // Background service worker for PCT Reflection Reminder
 
 // Import configuration
-import { CONFIG } from './config.js';
+importScripts('config.js');
 
 const REFLECTION_TOOL_URL = CONFIG.REFLECTION_TOOL_URL;
 
