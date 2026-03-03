@@ -33,19 +33,7 @@ document.getElementById('openReflection').addEventListener('click', () => {
 
 // Test notification
 document.getElementById('testNotification').addEventListener('click', () => {
-  chrome.notifications.create('testNotification', {
-    type: 'basic',
-    iconUrl: 'icon128.png',
-    title: '📝 Time for Your Daily Reflection',
-    message: 'Take a moment to reflect on your teaching day. (This is a test)',
-    buttons: [
-      { title: 'Add Reflection' },
-      { title: 'Remind in 10 min' }
-    ],
-    requireInteraction: true,
-    priority: 2
-  });
-  
+  chrome.runtime.sendMessage({ action: 'testNotification' });
   window.close();
 });
 

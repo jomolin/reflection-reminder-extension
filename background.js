@@ -114,6 +114,11 @@ chrome.notifications.onClosed.addListener((notificationId, byUser) => {
 
 // Listen for messages from the reflection tool
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'testNotification') {
+    showReflectionNotification();
+    sendResponse({ success: true });
+  }
+  
   if (request.action === 'reflectionCompleted') {
     const today = new Date().toISOString().split('T')[0];
     chrome.storage.local.set({ lastReflectionDate: today });
